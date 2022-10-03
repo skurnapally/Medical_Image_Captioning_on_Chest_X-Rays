@@ -20,7 +20,7 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('./Background/1.jpg')    
+add_bg_from_local('./Background/2.jpg')    
 
 
 st.title("Chest X-ray Captioning")
