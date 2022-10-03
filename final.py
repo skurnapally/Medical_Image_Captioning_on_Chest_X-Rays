@@ -28,9 +28,10 @@ Author_Name = '<p style="font-family:Franklin Gothic Medium;text-align:left;colo
 st.markdown(Author_Name,unsafe_allow_html=True)
 st.markdown("[<medium>Github</medium>](https://github.com/skurnapally/Medical_Image_Captioning_on_Chest_X-Rays)",
 unsafe_allow_html=True)
-text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">\nThis app will generate Findings part of an X-ray report.\nYou can upload 2 X-rays that are front view and side view of chest of the same individual.</p>'
+text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">\nThis app will generate Findings from the X-ray report.\nYou can upload 2   X-rays that are either front or lateral view of chest of the same individual.</p>'
 st.markdown(text,unsafe_allow_html=True)
-st.markdown("The 2nd X-ray is optional.")
+note = '<p style="font-family:Arial;text-align:left;color:Red; font-size: 20px;">NOTE: < style="font-family:Arial;text-align:left;color:White; font-size: 20px;"> The 2nd X-ray is optional.</p>'
+st.markdown(note,unsafe_allow_html=True)
 
 
 col1,col2 = st.beta_columns(2)
