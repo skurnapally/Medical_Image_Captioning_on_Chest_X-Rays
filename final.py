@@ -33,11 +33,12 @@ st.markdown(text,unsafe_allow_html=True)
 note = '<p style="font-family:Arial;text-align:left;color:Snow; font-size: 20px;">The 2nd X-ray is optional.</p>'
 st.markdown(note,unsafe_allow_html=True)
 col1,col2 = st.beta_columns(2)
+col1.markdown("Upload First X-Ray")
 image_1 = col1.file_uploader("X-ray 1",type=['png','jpg','jpeg'])
 image_2 = None
 if image_1:
+	col2.markdown("Upload Second X-Ray (Optinal)")
     image_2 = col2.file_uploader("X-ray 2 (optional)",type=['png','jpg','jpeg'])
-
 col1,col2 = st.beta_columns(2)
 predict_button = col1.button('Predict on uploaded files')
 test_data = col2.button('Predict on sample data')
