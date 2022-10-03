@@ -10,7 +10,7 @@ import numpy as np
 import cv2
 from nltk.translate.bleu_score import sentence_bleu
 
-chexnet_weights = "chexnet_weights/brucechou1983_CheXNet_Keras_0.3.0_weights.h5"
+chexnet_weights = "brucechou1983_CheXNet_Keras_0.3.0_weights.h5"
 
 def create_chexnet(chexnet_weights = chexnet_weights,input_size=(224,224)):
   """
@@ -115,10 +115,11 @@ class One_Step_Decoder(tf.keras.layers.Layer):
                                 name = 'onestepdecoder_embedding'
                               )
     self.LSTM = GRU(units=self.dense_dim,
-                    # return_sequences=True,
+                    return_sequences=True,
                     return_state=True,
                     name = 'onestepdecoder_LSTM'
                     )
+    self.LSTM1 = GRU(units=self.dense_dim,return_sequences=False,return_state=True,name = 'onestepdecoder_LSTM1')
     self.attention = global_attention(dense_dim = dense_dim)
     self.concat = Concatenate(axis=-1)
     self.dense = Dense(dense_dim,name = 'onestepdecoder_embedding_dense',activation = 'relu')
@@ -148,6 +149,7 @@ class One_Step_Decoder(tf.keras.layers.Layer):
     concat_input = self.concat([context_vector_time_axis,embedding_op])#output dimension = batch_size*input_length(here it is 1)*(dense_dim+embedding_dim)
     
     output,decoder_h = self.LSTM(concat_input,initial_state = decoder_h)
+    output,decoder_h = self.LSTM1(output,initial_state = decoder_h)
     #output shape = batch*1*dense_dim and decoder_h,decoder_c has shape = batch*dense_dim
     #we need to remove the time axis from this decoder_output
     
@@ -217,7 +219,7 @@ def create_model():
 
 def greedy_search_predict(image1,image2,model,tokenizer,input_size = (224,224)):
   """
-  Given paths to two x-ray images predicts the impression part of the x-ray in a greedy search algorithm
+  Given paths to two x-ray images predicts the Findings part of the x-ray in a greedy search algorithm
   """
   image1 = tf.expand_dims(cv2.resize(image1,input_size,interpolation = cv2.INTER_NEAREST),axis=0) #introduce batch and resize
   image2 = tf.expand_dims(cv2.resize(image2,input_size,interpolation = cv2.INTER_NEAREST),axis=0)
