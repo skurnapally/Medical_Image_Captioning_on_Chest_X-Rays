@@ -8,6 +8,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pandas as pd
 import numpy as np
 import cv2
+import pickle
 from nltk.translate.bleu_score import sentence_bleu
 
 chexnet_weights = "brucechou1983_CheXNet_Keras_0.3.0_weights.h5"
