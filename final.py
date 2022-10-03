@@ -30,15 +30,15 @@ st.markdown("[<medium>Github</medium>](https://github.com/skurnapally/Medical_Im
 unsafe_allow_html=True)
 text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">\nThis app will generate Findings from the X-ray report.\nYou can upload 2   X-rays that are either front or lateral view of chest of the same individual.</p>'
 st.markdown(text,unsafe_allow_html=True)
-note = '<p style="font-family:Arial;text-align:left;color:Snow; font-size: 20px;">The 2nd X-ray is optional.</p>'
+note = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">The 2nd X-ray is optional.</p>'
 st.markdown(note,unsafe_allow_html=True)
 
 
-col1,col2 = st.beta_columns(2)
-image_1 = col1.file_uploader("X-ray 1",type=['png','jpg','jpeg'])
+#col1,col2 = st.beta_columns(2)
+image_1 = st.file_uploader("Choose First X-ray",type=['png','jpg','jpeg'])
 image_2 = None
 if image_1:
-    image_2 = col2.file_uploader("X-ray 2 (optional)",type=['png','jpg','jpeg'])
+    image_2 = st.file_uploader("Choose Second X-ray (optional)",type=['png','jpg','jpeg'])
 
 col1,col2 = st.beta_columns(2)
 predict_button = col1.button('Predict on uploaded files')
