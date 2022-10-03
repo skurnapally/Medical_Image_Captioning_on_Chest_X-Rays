@@ -191,7 +191,7 @@ def create_model():
   """
   #hyperparameters
   input_size = (224,224)
-  with open('tokeniser.pickle', 'rb') as handle:
+  with open('tokenizer.pickle', 'rb') as handle:
   	tokenizer = pickle.load(handle)
   max_pad = 29
   batch_size = 100
