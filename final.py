@@ -32,12 +32,11 @@ text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px
 st.markdown(text,unsafe_allow_html=True)
 note = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">The 2nd X-ray is optional.</p>'
 st.markdown(note,unsafe_allow_html=True)
-note = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">The 2nd X-ray is optional.</p>'
-st.markdown(note,unsafe_allow_html=True)
 note = '<p style="font-family:Arial;text-align:center;color:White; font-size: 20px;">Choose First X-Ray</p>'
 st.markdown(note,unsafe_allow_html=True)
+
 #col1,col2 = st.beta_columns(2)
-image_1 = st.file_uploader(type=['png','jpg','jpeg'])
+image_1 = st.file_uploader(label = "",type=['png','jpg','jpeg'])
 image_2 = None
 if image_1:
     image_2 = st.file_uploader(label = "Choose Second X-ray (optional)",type=['png','jpg','jpeg'])
