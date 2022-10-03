@@ -24,9 +24,9 @@ add_bg_from_local('./Background/Background.png')
 
 original_title = '<p style="font-family:Franklin Gothic Medium;text-align:left;color:Yellow; font-size: 70px;">Chest X-ray Captioning</p>'
 st.markdown(original_title, unsafe_allow_html=True)
-Author_Name = '<p style="font-family:Franklin Gothic Medium;text-align:left;color:Magenta;font-weight: bold; font-size: 20px;">by Santhosh Kurnapally</p>'
+Author_Name = '<p style="font-family:Franklin Gothic Medium;text-align:left;color:Magenta;font-weight: bold; font-size: 25px;">by Santhosh Kurnapally</p>'
 st.markdown(Author_Name,unsafe_allow_html=True)
-st.markdown("[<medium>Find Code here on Github</medium>](https://github.com/skurnapally/Medical_Image_Captioning_on_Chest_X-Rays)",
+st.markdown("[<medium>Find Code here (Github)</medium>](https://github.com/skurnapally/Medical_Image_Captioning_on_Chest_X-Rays)",
 unsafe_allow_html=True)
 text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">\nThis app will generate Findings from the X-ray report.\nYou can upload 2 X-rays that are either front or lateral view of chest of the same individual.</p>'
 st.markdown(text,unsafe_allow_html=True)
