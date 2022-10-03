@@ -40,7 +40,7 @@ image_2 = None
 if image_1:
 	secondxray = '<p style="font-family:Arial;text-align:center;color:Magenta; font-size: 20px;">Choose Second X-Ray (Optional)</p>'
 	st.markdown(secondxray,unsafe_allow_html=True)
-    image_2 = st.file_uploader(label = "",type=['png','jpg','jpeg'])
+	image_2 = st.file_uploader(label = "",type=['png','jpg','jpeg'])
 
 col1,col2 = st.beta_columns(2)
 predict_button = col1.button('Predict on uploaded files')
