@@ -30,7 +30,7 @@ st.markdown("[<medium>Github</medium>](https://github.com/skurnapally/Medical_Im
 unsafe_allow_html=True)
 text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">\nThis app will generate Findings from the X-ray report.\nYou can upload 2   X-rays that are either front or lateral view of chest of the same individual.</p>'
 st.markdown(text,unsafe_allow_html=True)
-note = '<span class="red">Red</span> <span class="blue">Blue</span> <span class="green">Green</span>'
+note = '<p style="font-family:Arial;text-align:left;color:Snow; font-size: 20px;">The 2nd X-ray is optional.</p>'
 st.markdown(note,unsafe_allow_html=True)
 
 
