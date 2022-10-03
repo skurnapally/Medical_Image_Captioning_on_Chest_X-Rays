@@ -94,8 +94,8 @@ if testdata:
         	image_1 = os.path.join(file_path,os.listdir(file_path)[0])
         	image_2 = image_1
     	predict(image_1,image_2,model_tokenizer,True)
-	model_tokenizer = create_model()
-	predict_sample(model_tokenizer)
+    model_tokenizer = create_model()
+    predict_sample(model_tokenizer)
 
 
 
