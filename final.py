@@ -32,19 +32,20 @@ text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px
 st.markdown(text,unsafe_allow_html=True)
 note = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">The 2nd X-ray is optional.</p>'
 st.markdown(note,unsafe_allow_html=True)
-firstxray = '<p style="font-family:Arial;text-align:center;color:Magenta; font-size: 20px;">Choose First X-Ray</p>'
-st.markdown(firstxray,unsafe_allow_html=True)
-#col1,col2 = st.beta_columns(2)
-image_1 = st.file_uploader(label = "",type=['png','jpg','jpeg'])
-image_2 = None
-if image_1:
-	secondxray = '<p style="font-family:Arial;text-align:center;color:Magenta; font-size: 20px;">Choose Second X-Ray (Optional)</p>'
-	st.markdown(secondxray,unsafe_allow_html=True)
-	image_2 = st.file_uploader(label = " ",type=['png','jpg','jpeg'])
-
 col1,col2 = st.beta_columns(2)
 predict_button = col1.button('Predict on uploaded files')
 test_data = col2.button('Predict on sample data')
+
+if predict_button:
+	firstxray = '<p style="font-family:Arial;text-align:center;color:red; font-size: 20px;">Choose First X-Ray</p>'
+	st.markdown(firstxray,unsafe_allow_html=True)
+	image_1 = st.file_uploader(label = "",type=['png','jpg','jpeg'])
+	image_2 = None
+	if image_1:
+		secondxray = '<p style="font-family:Arial;text-align:center;color:red; font-size: 20px;">Choose Second X-Ray (Optional)</p>'
+		st.markdown(secondxray,unsafe_allow_html=True)
+		image_2 = st.file_uploader(label = " ",type=['png','jpg','jpeg'])
+	predict_uploaded = st.button('Predict')
 
 @st.cache
 def create_model():
@@ -52,9 +53,9 @@ def create_model():
     return model_tokenizer
 
 
-def predict(image_1,image_2,model_tokenizer,predict_button = predict_button):
+def predict(image_1,image_2,model_tokenizer,predict_uploaded = predict_uploaded):
     start = time.process_time()
-    if predict_button:
+    if predict_uploaded:
         if (image_1 is not None):
             start = time.process_time()  
             image_1 = Image.open(image_1).convert("RGB") #converting to 3 channels
