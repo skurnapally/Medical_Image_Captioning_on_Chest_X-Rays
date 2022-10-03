@@ -20,11 +20,11 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('./Background/1.jpg')    
+add_bg_from_local('./Background/Background.jpg')    
 
-original_title = '<center><p style="font-family:Franklin Gothic Medium;color:Black;background-color:Yellow; font-size: 70px;">Chest X-ray Captioning</p></center>'
+original_title = '<p style="font-family:Franklin Gothic Medium;text-align:center;color:Black; font-size: 70px;">Chest X-ray Captioning</p>'
 st.markdown(original_title, unsafe_allow_html=True)
-Author_Name = '<right><p style="font-family:Franklin Gothic Medium;color:Black;background-color:Yellow; font-size: 20px;">by Santhosh Kurnapally</p></right>'
+Author_Name = '<right><p style="font-family:Franklin Gothic Medium;text-align:right;color:Red; font-size: 20px;">by Santhosh Kurnapally</p></right>'
 st.markdown(Author_Name,unsafe_allow_html=True)
 st.markdown("[<small>Github</small>](https://github.com/skurnapally/Medical_Image_Captioning_on_Chest_X-Rays)",
 unsafe_allow_html=True)
