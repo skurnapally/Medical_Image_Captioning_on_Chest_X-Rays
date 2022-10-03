@@ -63,7 +63,7 @@ def predict(image_1,image_2,model_tokenizer,predict_button = predict_button):
             st.image([image_1,image_2],width=300)
             caption = cm.function1([image_1],[image_2],model_tokenizer)
             findings_text = '<p style="font-family:Arial;text-align:left;color:red; font-size: 20px;">Findings</p>'
-			st.markdown(findings_text,unsafe_allow_html=True)
+            st.markdown(findings_text,unsafe_allow_html=True)
             findings = st.empty()
             findings.write(caption[0])
             time_taken = "Time Taken for prediction: %i seconds"%(time.process_time()-start)
