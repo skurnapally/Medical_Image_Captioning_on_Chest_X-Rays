@@ -66,8 +66,8 @@ def predict(image_1,image_2,model_tokenizer,predict_button = predict_button):
             st.markdown(findings_text,unsafe_allow_html=True)
             findings = '<p style="font-family:Arial;text-align:left;color:white; font-size: 20px;">'+caption[0]+'</p>'
             st.markdown(findings,unsafe_allow_html=True)
-            time_taken = "Time Taken for prediction: %i seconds"%(time.process_time()-start)
-            st.write(time_taken)
+            timetook = '<p style="font-family:Arial;text-align:left;color:white; font-size: 20px;">'+"Time Took for prediction: "+time.process_time()-start + ' seconds</p>'
+            st.markdown(timetook,unsafe_allow_html=True)
             del image_1,image_2
         else:
             st.markdown("## Upload an Image")
