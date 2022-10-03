@@ -22,6 +22,8 @@ def add_bg_from_local(image_file):
     )
 add_bg_from_local('./Background/Background.jpg')    
 
+original_title = '<p style="font-family:Courier; color:Blue; font-size: 20px;">Original image</p>'
+st.markdown(original_title, unsafe_allow_html=True)
 
 st.title("Chest X-ray Captioning")
 
