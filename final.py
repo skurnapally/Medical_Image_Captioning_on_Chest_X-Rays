@@ -35,7 +35,7 @@ st.markdown(note,unsafe_allow_html=True)
 col1,col2 = st.beta_columns(2)
 predict_button = col1.button('Predict on uploaded files')
 test_data = col2.button('Predict on sample data')
-
+predict_uploaded = False
 if predict_button:
 	firstxray = '<p style="font-family:Arial;text-align:center;color:red; font-size: 20px;">Choose First X-Ray</p>'
 	st.markdown(firstxray,unsafe_allow_html=True)
