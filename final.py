@@ -20,15 +20,15 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('./Background/5.png')    
+add_bg_from_local('./Background/Background.png')    
 
 original_title = '<p style="font-family:Franklin Gothic Medium;text-align:left;color:Yellow; font-size: 70px;">Chest X-ray Captioning</p>'
 st.markdown(original_title, unsafe_allow_html=True)
 Author_Name = '<p style="font-family:Franklin Gothic Medium;text-align:left;color:Magenta;font-weight: bold; font-size: 20px;">by Santhosh Kurnapally</p>'
 st.markdown(Author_Name,unsafe_allow_html=True)
-st.markdown("[<medium>Github</medium>](https://github.com/skurnapally/Medical_Image_Captioning_on_Chest_X-Rays)",
+st.markdown("[<medium>Find Code here on Github</medium>](https://github.com/skurnapally/Medical_Image_Captioning_on_Chest_X-Rays)",
 unsafe_allow_html=True)
-text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">\nThis app will generate Findings from the X-ray report.\nYou can upload 2   X-rays that are either front or lateral view of chest of the same individual.</p>'
+text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">\nThis app will generate Findings from the X-ray report.\nYou can upload 2 X-rays that are either front or lateral view of chest of the same individual.</p>'
 st.markdown(text,unsafe_allow_html=True)
 note = '<p style="font-family:Arial;text-align:left;color:Snow; font-size: 20px;">The 2nd X-ray is optional.</p>'
 st.markdown(note,unsafe_allow_html=True)
@@ -66,7 +66,7 @@ def predict(image_1,image_2,model_tokenizer,predict_button = predict_button):
             st.markdown(findings_text,unsafe_allow_html=True)
             findings = '<p style="font-family:Arial;text-align:left;color:white; font-size: 20px;">'+caption[0]+'</p>'
             st.markdown(findings,unsafe_allow_html=True)
-            timetook = '<p style="font-family:Arial;text-align:left;color:white; font-size: 20px;">'+"Time Took for prediction: "+str(round(time.process_time()-start,2))+ ' seconds</p>'
+            timetook = '<p style="font-family:Arial;text-align:left;color:white; font-size: 20px;">'+"Time Took for prediction: "+str(time.process_time()-start) + ' seconds</p>'
             st.markdown(timetook,unsafe_allow_html=True)
             del image_1,image_2
         else:
