@@ -191,7 +191,8 @@ def create_model():
   """
   #hyperparameters
   input_size = (224,224)
-  tokenizer = joblib.load('tokenizer.pkl')
+  with open('tokeniser.pickle', 'rb') as handle:
+  	tokenizer = pickle.load(handle)
   max_pad = 29
   batch_size = 100
   vocab_size = len(tokenizer.word_index)
