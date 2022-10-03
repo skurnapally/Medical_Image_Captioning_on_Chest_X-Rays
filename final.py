@@ -59,7 +59,7 @@ if predict_button:
     	start = time.process_time()
     	if predict_uploaded:
         	if (image_1 is not None):
-            	start = time.process_time()  
+        		start = time.process_time()  
             	image_1 = Image.open(image_1).convert("RGB") #converting to 3 channels
             	image_1 = np.array(image_1)/255
             	if image_2 is None:
