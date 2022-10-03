@@ -51,8 +51,8 @@ if predict_button:
 
 	@st.cache
 	def create_model():
-    	model_tokenizer = cm.create_model()
-    	return model_tokenizer
+		model_tokenizer = cm.create_model()
+		return model_tokenizer
 
 
 	def predict(image_1,image_2,model_tokenizer,predict_uploaded = predict_uploaded):
