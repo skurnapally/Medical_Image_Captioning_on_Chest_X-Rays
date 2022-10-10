@@ -28,6 +28,7 @@ Author_Name = '<p style="font-family:Franklin Gothic Medium;text-align:left;colo
 st.markdown(Author_Name,unsafe_allow_html=True)
 st.markdown("[<medium>Find Code here (Github)</medium>](https://github.com/skurnapally/Medical_Image_Captioning_on_Chest_X-Rays)",
 unsafe_allow_html=True)
+st.markdown("[<medium>Find my blog on (Medium)</medium>](https://medium.com/@skurnapally/medical-image-captioning-using-attention-based-encoder-decoder-recurrent-neural-networks-b90f65907f49)",unsafe_allow_html=True)
 text = '<p style="font-family:Arial;text-align:left;color:White; font-size: 20px;">\nThis app will generate Findings from the X-ray report.\nYou can upload 2 X-rays that are either front or lateral view of chest of the same individual.</p>'
 st.markdown(text,unsafe_allow_html=True)
 note = '<p style="font-family:Arial;text-align:left;color:Snow; font-size: 20px;">The 2nd X-ray is optional.</p>'
