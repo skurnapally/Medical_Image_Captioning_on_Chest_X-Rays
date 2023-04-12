@@ -1,3 +1,4 @@
+typing-extensions==4.2.0
 opencv_python_headless==4.5.1.48
 numpy==1.19.2
 nltk==3.5
