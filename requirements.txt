@@ -1,4 +1,4 @@
-typing-extensions==4.2.0
+typing-extensions
 opencv_python_headless
 numpy
 nltk
