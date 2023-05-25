@@ -10,4 +10,4 @@ Pillow==8.4.0
 cloudpickle==2.2.1
 pickleshare==0.7.5
 jsonpickle==3.0.1
-keras_preprocessing
+Keras-Preprocessing
