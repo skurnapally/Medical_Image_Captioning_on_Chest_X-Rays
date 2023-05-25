@@ -1,3 +1,4 @@
+! pip install numpy == 1.9.2
 import streamlit as st
 import os
 import numpy as np
