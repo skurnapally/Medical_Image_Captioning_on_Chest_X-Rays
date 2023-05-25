@@ -1,0 +1,9 @@
+opencv_python_headless==4.5.1.48
+nltk==3.5
+pandas==1.1.3
+tensorflow==2.4.1
+joblib==0.17.0
+streamlit==0.70.0
+Pillow==8.1.0
+pickle5==0.0.6
+numpy==1.19.2
