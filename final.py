@@ -1,4 +1,18 @@
-! pip install numpy == 1.9.2
+
+import subprocess
+
+def install_package(package_name, version=None):
+    if version:
+        package_name = f"{package_name}=={version}"
+    command = ["pip", "install", package_name]
+    subprocess.check_call(command)
+
+# Usage example
+install_package("numpy", "1.9.2")
+
+
+
+
 import streamlit as st
 import os
 import numpy as np
