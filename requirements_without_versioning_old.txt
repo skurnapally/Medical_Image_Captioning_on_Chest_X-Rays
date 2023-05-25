@@ -7,4 +7,6 @@ tensorflow
 joblib
 streamlit
 Pillow
-pickle5
+Pickle5
+
+
