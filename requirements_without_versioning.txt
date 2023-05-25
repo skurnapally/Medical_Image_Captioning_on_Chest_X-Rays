@@ -1,0 +1,10 @@
+typing-extensions
+opencv_python_headless
+numpy
+nltk
+pandas
+tensorflow
+joblib
+streamlit
+Pillow
+pickle5
