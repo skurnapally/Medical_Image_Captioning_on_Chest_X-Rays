@@ -61,7 +61,7 @@ col1,col2 = st.beta_columns(2)
 predict_button = col1.button('Predict on uploaded files')
 test_data = col2.button('Predict on sample data')
 
-@st.cache_data
+@st.cache
 def create_model():
     model_tokenizer = cm.create_model()
     return model_tokenizer
