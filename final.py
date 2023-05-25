@@ -1,4 +1,4 @@
-
+'''
 import subprocess
 
 def install_package(package_name, version=None):
@@ -9,7 +9,7 @@ def install_package(package_name, version=None):
 
 # Usage example
 install_package("numpy", "1.9.2")
-
+'''
 
 
 
